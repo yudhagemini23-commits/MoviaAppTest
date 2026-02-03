@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		151730BB2F32731600B74B0A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 151730BA2F32731600B74B0A /* SwiftyJSON */; };
+		151730BD2F32732300B74B0A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 151730BC2F32732300B74B0A /* SDWebImage */; };
+		151730BF2F32732700B74B0A /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 151730BE2F32732700B74B0A /* SDWebImageMapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		1517307E2F3265C000B74B0A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151730BD2F32732300B74B0A /* SDWebImage in Frameworks */,
+				151730BF2F32732700B74B0A /* SDWebImageMapKit in Frameworks */,
+				151730BB2F32731600B74B0A /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +100,7 @@
 				151730692F3265BF00B74B0A /* MoviaAppTest */,
 				151730802F3265C000B74B0A /* MoviaAppTestTests */,
 				1517308A2F3265C000B74B0A /* MoviaAppTestUITests */,
+				151730B92F32730800B74B0A /* Frameworks */,
 				151730682F3265BF00B74B0A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +113,13 @@
 				151730872F3265C000B74B0A /* MoviaAppTestUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		151730B92F32730800B74B0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +142,9 @@
 			);
 			name = MoviaAppTest;
 			packageProductDependencies = (
+				151730BA2F32731600B74B0A /* SwiftyJSON */,
+				151730BC2F32732300B74B0A /* SDWebImage */,
+				151730BE2F32732700B74B0A /* SDWebImageMapKit */,
 			);
 			productName = MoviaAppTest;
 			productReference = 151730672F3265BF00B74B0A /* MoviaAppTest.app */;
@@ -208,6 +228,10 @@
 			);
 			mainGroup = 1517305E2F3265BF00B74B0A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1517309B2F32663A00B74B0A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				1517309D2F32668600B74B0A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 151730682F3265BF00B74B0A /* Products */;
 			projectDirPath = "";
@@ -296,6 +320,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,9 +328,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.app.MoviaAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,6 +352,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +360,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.app.MoviaAppTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -563,6 +597,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1517309B2F32663A00B74B0A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		1517309D2F32668600B74B0A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		151730BA2F32731600B74B0A /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1517309B2F32663A00B74B0A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		151730BC2F32732300B74B0A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1517309D2F32668600B74B0A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		151730BE2F32732700B74B0A /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1517309D2F32668600B74B0A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1517305F2F3265BF00B74B0A /* Project object */;
 }
