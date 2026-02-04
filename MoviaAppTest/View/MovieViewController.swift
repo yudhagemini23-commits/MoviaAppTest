@@ -20,7 +20,6 @@ class MovieViewController: UIViewController {
             setupUI()
             setupBinding()
             
-            // Mulai ambil data
             viewModel.loadData()
         }
         
@@ -29,31 +28,25 @@ class MovieViewController: UIViewController {
             
             searchBar.isUserInteractionEnabled = true
             
-            // Delegate & DataSource
             tableView.delegate = self
             tableView.dataSource = self
             searchBar.delegate = self
             
-            // Setup SearchBar agar tombol 'Done' muncul
             searchBar.returnKeyType = .done
             
-            // ⚠️ REGISTER XIB CELL (WAJIB UNTUK XIB) ⚠️
             let nib = UINib(nibName: "MovieCell", bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: "MovieCell")
             
-            // Hilangkan garis-garis kosong di bawah list
             tableView.tableFooterView = UIView()
         }
         
         func setupBinding() {
-            // Saat data update -> Reload TableView
             viewModel.onUpdate = { [weak self] in
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
             }
             
-            // Saat error -> Munculkan Alert
             viewModel.onError = { [weak self] errorMsg in
                 DispatchQueue.main.async {
                     let alert = UIAlertController(title: "Error", message: errorMsg, preferredStyle: .alert)
@@ -64,7 +57,6 @@ class MovieViewController: UIViewController {
         }
     }
 
-    // --- EXTENSION: TABLE VIEW ---
     extension MovieViewController: UITableViewDataSource, UITableViewDelegate {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,25 +75,22 @@ class MovieViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 140 // Sesuaikan dengan tinggi desain XIB Bapak
+            return 140
         }
         
-        // Opsional: Klik Row untuk print judul (bisa dikembangkan ke Detail Page)
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             tableView.deselectRow(at: indexPath, animated: true)
             print("Selected: \(viewModel.displayedMovies[indexPath.row].title)")
         }
     }
 
-    // --- EXTENSION: SEARCH BAR ---
     extension MovieViewController: UISearchBarDelegate {
         
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            // Real-time search saat ngetik
             viewModel.searchMovie(query: searchText)
         }
         
         func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-            searchBar.resignFirstResponder() // Tutup keyboard saat enter
+            searchBar.resignFirstResponder()
         }
     }
