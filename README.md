@@ -12,7 +12,7 @@ Aplikasi iOS untuk menampilkan daftar film populer menggunakan TMDB API dengan a
 ### Pendekatan & Arsitektur
 - **MVVM (Model-View-ViewModel)**: Memisahkan logika bisnis dengan tampilan.
 - **Cache-First Approach**: Aplikasi akan menampilkan data dari `UserDefaults` terlebih dahulu sebelum melakukan fetch ke API.
-- **Programmatic XIB**: UI dibangun menggunakan XIB untuk modularitas dan performa yang lebih baik.
+- **Programmatic XIB**: UI dibangun menggunakan XIB untuk modularitas dan performa.
 
 ### Fitur Utama
 - **Real-time Search**: Mencari film berdasarkan judul.
