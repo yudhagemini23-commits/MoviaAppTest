@@ -17,4 +17,4 @@ Aplikasi iOS untuk menampilkan daftar film populer menggunakan TMDB API dengan a
 ### Fitur Utama
 - **Real-time Search**: Mencari film berdasarkan judul.
 - **Offline Support**: Data tetap muncul meski tanpa koneksi internet (Caching).
-- **Optimized Image Loading**: Menggunakan SDWebImage untuk caching gambar yang smooth.
+- **Optimized Image Loading**: Menggunakan SDWebImage untuk caching gambar.
